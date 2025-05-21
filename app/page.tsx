@@ -154,24 +154,26 @@ export default function Home() {
                 <VideoCard
                   title="Urban Legends"
                   description="A collaborative student project exploring urban myths through diverse animation styles"
-                  thumbnail="/placeholder.svg?height=400&width=600"
+                  thumbnail="https://static.vecteezy.com/system/resources/previews/060/539/493/non_2x/student-boy-sitting-at-home-office-desk-doing-school-homework-surfing-internet-on-desktop-computer-flat-illustration-isolated-on-white-vector.jpg"
                   author="Animation Workshop Group"
+                  videoUrl="videos/Doniyor-13.mp4"
                 />
               </ScrollAnimation>
               <ScrollAnimation variant="fade-up" delay={200}>
                 <VideoCard
                   title="The Last Leaf"
                   description="A touching adaptation of O. Henry's story using traditional animation techniques."
-                  thumbnail="/placeholder.svg?height=400&width=600"
+                  thumbnail="https://png.pngtree.com/png-vector/20230728/ourmid/pngtree-student-on-computer-vector-png-image_6998285.png"
                   author="Maria K."
+                  videoUrl="videos/Shohruh-16.mp4"
                 />
               </ScrollAnimation>
               <ScrollAnimation variant="fade-up" delay={300}>
                 <VideoCard
                   title="Mechanical Heart"
                   description="A steampunk-inspired animation showcasing advanced character rigging and environment design."
-                  thumbnail="/placeholder.svg?height=400&width=600"
-                  author="Alex T."
+                  thumbnail="https://img.freepik.com/free-vector/character-playing-online-video-games_23-2148519980.jpg?semt=ais_hybrid&w=740"
+                  author="videos/Doniyor-17.mp4"
                 />
               </ScrollAnimation>
             </div>
