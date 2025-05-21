@@ -1,65 +1,81 @@
-"use client"
+"use client";
 
-import Image from "next/image"
-import Link from "next/link"
-import { Navbar } from "@/components/navbar"
-import { Footer } from "@/components/footer"
-import { VideoCard } from "@/components/video-card"
-import { Button } from "@/components/ui/button"
-import { Award, BookOpen, Film, Users } from "lucide-react"
-import { useLanguage } from "@/lib/i18n/language-context"
-import { ScrollAnimation } from "@/components/scroll-animation"
+import Image from "next/image";
+import Link from "next/link";
+import { Navbar } from "@/components/navbar";
+import { Footer } from "@/components/footer";
+import { VideoCard } from "@/components/video-card";
+import { Button } from "@/components/ui/button";
+import { Award, BookOpen, Film, Users } from "lucide-react";
+import { useLanguage } from "@/lib/i18n/language-context";
+import { ScrollAnimation } from "@/components/scroll-animation";
 
 export default function AboutPage() {
-  const { t } = useLanguage()
+  const { t } = useLanguage();
 
   // Portfolio works data
   const portfolioWorks = [
     {
       id: 1,
-      title: "The Journey Within",
+      title: "Urban Legendsas",
       description:
-        "An animated short film exploring the inner world of emotions through vibrant visuals and dynamic character animation.",
-      thumbnail: "/placeholder.svg?height=400&width=600",
-      videoUrl: "#",
+        "A collaborative student project exploring urban myths through diverse animation styles.",
+      thumbnail:
+        "https://img.freepik.com/free-vector/character-playing-online-video-games_23-2148519980.jpg?semt=ais_hybrid&w=740",
+      author: "Animation Workshop Group",
+      videoUrl: "videos/Doniyor-13.mp4",
     },
     {
       id: 2,
-      title: "City of Dreams",
-      description: "A stylized animation showcasing urban landscapes with a blend of 2D and 3D techniques.",
-      thumbnail: "/placeholder.svg?height=400&width=600",
-      videoUrl: "#",
+      title: "The Last Leaf",
+      description:
+        "A touching adaptation of O. Henry's story using traditional animation techniques.",
+      thumbnail:
+        "https://img.freepik.com/free-vector/character-playing-online-video-games_23-2148519980.jpg?semt=ais_hybrid&w=740",
+      author: "Maria K.",
+      videoUrl: "videos/final.mp4",
     },
     {
       id: 3,
-      title: "Nature's Symphony",
+      title: "Mechanical Heart",
       description:
-        "An experimental animation celebrating the harmony of nature through fluid motion and organic transitions.",
-      thumbnail: "/placeholder.svg?height=400&width=600",
-      videoUrl: "#",
+        "A steampunk-inspired animation showcasing advanced character rigging and environment design.",
+      thumbnail:
+        "https://img.freepik.com/free-vector/character-playing-online-video-games_23-2148519980.jpg?semt=ais_hybrid&w=740",
+      author: "Alex T.",
+      videoUrl: "videos/Husanjon-24.mp4",
     },
     {
       id: 4,
-      title: "Mechanical Heart",
-      description: "A steampunk-inspired animation with intricate character designs and detailed environments.",
-      thumbnail: "/placeholder.svg?height=400&width=600",
-      videoUrl: "#",
+      title: "Dream Sequence",
+      description:
+        "An experimental animation exploring the surreal nature of dreams through fluid transitions.",
+      thumbnail:
+        "https://png.pngtree.com/png-vector/20230728/ourmid/pngtree-student-on-computer-vector-png-image_6998285.png",
+      author: "Sophia R.",
+      videoUrl: "videos/Shohruh-16.mp4",
     },
     {
       id: 5,
-      title: "Folklore Reimagined",
-      description: "A series of short animations bringing traditional folklore characters into modern settings.",
-      thumbnail: "/placeholder.svg?height=400&width=600",
-      videoUrl: "#",
+      title: "The Lighthouse",
+      description:
+        "A moody atmospheric piece combining 2D and 3D elements to create a unique visual style.",
+      thumbnail:
+        "https://png.pngtree.com/png-vector/20230728/ourmid/pngtree-student-on-computer-vector-png-image_6998285.png",
+      author: "Daniel M.",
+      videoUrl: "videos/Doniyor-17.mp4",
     },
     {
       id: 6,
-      title: "Abstract Emotions",
-      description: "An experimental piece using abstract shapes and colors to convey complex emotional states.",
-      thumbnail: "/placeholder.svg?height=400&width=600",
-      videoUrl: "#",
+      title: "Floating Islands",
+      description:
+        "A fantasy-inspired animation with detailed environment design and character animation.",
+      thumbnail:
+        "https://png.pngtree.com/png-vector/20230728/ourmid/pngtree-student-on-computer-vector-png-image_6998285.png",
+      author: "Elena V.",
+      videoUrl: "videos/Doniyor-13.mp4",
     },
-  ]
+  ];
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -72,11 +88,19 @@ export default function AboutPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
               <ScrollAnimation variant="fade-right">
                 <article>
-                  <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-6">{t("aboutMeTitle")}</h1>
-                  <p className="text-xl text-muted-foreground mb-6">{t("aboutMeSubtitle")}</p>
+                  <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-6">
+                    {t("aboutMeTitle")}
+                  </h1>
+                  <p className="text-xl text-muted-foreground mb-6">
+                    {t("aboutMeSubtitle")}
+                  </p>
                   <div className="flex flex-col sm:flex-row gap-4">
                     <Button size="lg" asChild>
-                      <Link href="https://t.me/ilkhom_karimov" target="_blank" rel="noopener noreferrer">
+                      <Link
+                        href="https://t.me/ilkhom_karimov"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         {t("contactMe")}
                       </Link>
                     </Button>
@@ -88,9 +112,16 @@ export default function AboutPage() {
               </ScrollAnimation>
 
               <ScrollAnimation variant="fade-left">
-                <figure className="relative aspect-square md:aspect-auto md:h-[500px] rounded-lg overflow-hidden bg-black">
-                  <Image src="/images/ilhom-karimov.png" alt="Ilhom Karimov" fill className="object-contain" />
-                  <figcaption className="sr-only">Portrait of Ilhom Karimov</figcaption>
+                <figure className="relative aspect-square md:aspect-auto md:h-[500px] rounded-lg overflow-hidden ">
+                  <Image
+                    src="images/ilhom.png"
+                    alt="Ilhom Karimov"
+                    fill
+                    className="object-contain"
+                  />
+                  <figcaption className="sr-only">
+                    Portrait of Ilhom Karimov
+                  </figcaption>
                 </figure>
               </ScrollAnimation>
             </div>
@@ -102,7 +133,9 @@ export default function AboutPage() {
           <div className="container">
             <ScrollAnimation variant="fade-up">
               <article className="max-w-3xl mx-auto">
-                <h2 className="text-3xl font-bold tracking-tight mb-8">{t("myJourney")}</h2>
+                <h2 className="text-3xl font-bold tracking-tight mb-8">
+                  {t("myJourney")}
+                </h2>
 
                 <div className="space-y-6 text-lg">
                   <p>{t("journeyText1")}</p>
@@ -120,7 +153,9 @@ export default function AboutPage() {
           <div className="container">
             <ScrollAnimation variant="fade-up">
               <header className="text-center mb-12">
-                <h2 className="text-3xl font-bold tracking-tight">{t("skillsExpertise")}</h2>
+                <h2 className="text-3xl font-bold tracking-tight">
+                  {t("skillsExpertise")}
+                </h2>
               </header>
             </ScrollAnimation>
 
@@ -128,7 +163,9 @@ export default function AboutPage() {
               <ScrollAnimation variant="fade-up" delay={100}>
                 <article className="bg-background p-6 rounded-lg shadow-sm">
                   <Film className="h-10 w-10 text-primary mb-4" />
-                  <h3 className="text-xl font-semibold mb-2">{t("animationTechniques")}</h3>
+                  <h3 className="text-xl font-semibold mb-2">
+                    {t("animationTechniques")}
+                  </h3>
                   <ul className="space-y-2 text-muted-foreground">
                     <li>2D Traditional Animation</li>
                     <li>Digital 2D Animation</li>
@@ -142,7 +179,9 @@ export default function AboutPage() {
               <ScrollAnimation variant="fade-up" delay={200}>
                 <article className="bg-background p-6 rounded-lg shadow-sm">
                   <BookOpen className="h-10 w-10 text-primary mb-4" />
-                  <h3 className="text-xl font-semibold mb-2">{t("storytelling")}</h3>
+                  <h3 className="text-xl font-semibold mb-2">
+                    {t("storytelling")}
+                  </h3>
                   <ul className="space-y-2 text-muted-foreground">
                     <li>Narrative Development</li>
                     <li>Character Design</li>
@@ -156,7 +195,9 @@ export default function AboutPage() {
               <ScrollAnimation variant="fade-up" delay={300}>
                 <article className="bg-background p-6 rounded-lg shadow-sm">
                   <Users className="h-10 w-10 text-primary mb-4" />
-                  <h3 className="text-xl font-semibold mb-2">{t("education")}</h3>
+                  <h3 className="text-xl font-semibold mb-2">
+                    {t("education")}
+                  </h3>
                   <ul className="space-y-2 text-muted-foreground">
                     <li>Animation Workshops</li>
                     <li>One-on-One Mentoring</li>
@@ -170,7 +211,9 @@ export default function AboutPage() {
               <ScrollAnimation variant="fade-up" delay={400}>
                 <article className="bg-background p-6 rounded-lg shadow-sm">
                   <Award className="h-10 w-10 text-primary mb-4" />
-                  <h3 className="text-xl font-semibold mb-2">{t("softwareProficiency")}</h3>
+                  <h3 className="text-xl font-semibold mb-2">
+                    {t("softwareProficiency")}
+                  </h3>
                   <ul className="space-y-2 text-muted-foreground">
                     <li>Adobe Animate</li>
                     <li>Toon Boom Harmony</li>
@@ -189,13 +232,19 @@ export default function AboutPage() {
           <div className="container">
             <ScrollAnimation variant="fade-up">
               <header className="text-center mb-12">
-                <h2 className="text-3xl font-bold tracking-tight">{t("portfolio")}</h2>
+                <h2 className="text-3xl font-bold tracking-tight">
+                  {t("portfolio")}
+                </h2>
               </header>
             </ScrollAnimation>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {portfolioWorks.map((work, index) => (
-                <ScrollAnimation key={work.id} variant="fade-up" delay={(index % 3) * 100}>
+                <ScrollAnimation
+                  key={work.id}
+                  variant="fade-up"
+                  delay={(index % 3) * 100}
+                >
                   <VideoCard
                     title={work.title}
                     description={work.description}
@@ -209,7 +258,7 @@ export default function AboutPage() {
         </section>
 
         {/* Teaching Philosophy */}
-        <section className="py-16 bg-primary/5">
+        {/* <section className="py-16 bg-primary/5">
           <div className="container">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
               <ScrollAnimation variant="fade-right">
@@ -236,16 +285,24 @@ export default function AboutPage() {
               </ScrollAnimation>
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* Contact CTA */}
         <section className="py-16">
           <div className="container text-center">
             <ScrollAnimation variant="fade-up">
-              <h2 className="text-3xl font-bold tracking-tight mb-4">{t("getInTouch")}</h2>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8">{t("getInTouchSubtitle")}</p>
+              <h2 className="text-3xl font-bold tracking-tight mb-4">
+                {t("getInTouch")}
+              </h2>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8">
+                {t("getInTouchSubtitle")}
+              </p>
               <Button size="lg" asChild>
-                <Link href="https://t.me/ilkhom_karimov" target="_blank" rel="noopener noreferrer">
+                <Link
+                  href="https://t.me/ilkhom_karimov"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   {t("contactViaTelegram")}
                 </Link>
               </Button>
@@ -256,5 +313,5 @@ export default function AboutPage() {
 
       <Footer />
     </div>
-  )
+  );
 }

@@ -132,6 +132,14 @@ export const translations = {
 
     // About page
     aboutMeTitle: "Men haqimda",
+//     Ilhom Karimov
+// "Lola Animation" loyihasi bosh animatori | 3D animatsiya "Shogirdlik" dasturi bo'yicha ustoz
+// Animatsiya sohasida 3 yillik tajribaga ega mutaxassis.
+// Ular ishtirokida quyidagi loyihalar tayyorlangan:
+//  • “Baxt Ulashamiz”
+//  • “Lulu Nana”
+//  • “Qahramonlar”
+// Nafaqat o‘zi muvaffaqiyatli loyihalarni amalga oshirgan, balki o‘z bilim va tajribasini boshqalarga ulashishga ham ulgurganlar. Ular ta’lim bergan 6 nafar o‘quvchi bugungi kunda Lola Animation jamoasining bir qismiga aylanib, animator sifatida ishlashmoqda.
     aboutMeSubtitle:
       "Men Ilhom Karimov, animatsiya san'ati orqali hikoyalarni jonlantirishga ishtiyoqli animator va o'qituvchiman.",
     contactMe: "Men bilan bog'laning",

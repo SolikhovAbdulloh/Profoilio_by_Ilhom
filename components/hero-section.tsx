@@ -10,7 +10,7 @@ export function HeroSection() {
 
   return (
     <section className="relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-pink-500/20 z-0 dark:from-purple-500/10 dark:to-pink-500/10" />
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-200/20 to-pink-100/20 z-0 dark:from-purple-500/10 dark:to-pink-500/10" />
 
       <div className="container relative z-10 py-20 md:py-32 flex flex-col items-center text-center">
         <ScrollAnimation variant="fade-down">
